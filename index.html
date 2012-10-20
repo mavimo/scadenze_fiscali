@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scadenze fiscali by mavimo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Scadenze fiscali</h1>
+        <p>Create a scraper to generate a parsable output (CSV, XML,JSON, ..) of tax deadline in Italy</p>
+
+        <p class="view"><a href="https://github.com/mavimo/scadenze_fiscali">View the Project on GitHub <small>mavimo/scadenze_fiscali</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mavimo/scadenze_fiscali/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mavimo/scadenze_fiscali/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mavimo/scadenze_fiscali">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Scadenze fiscali</h1>
+
+<p>Create a scraper to generate a parsable output (CSV, XML,JSON, ..) of tax deadline in Italy.</p>
+
+<h2>Install</h2>
+
+<p>Install <a href="http://scrapy.org/">scrapy</a> using PIP:</p>
+
+<div class="highlight"><pre>sudo pip install scrapy
+</pre></div>
+
+<p>clone this repo:</p>
+
+<div class="highlight"><pre>git clone git@github.com:mavimo/scadenze_fiscali.git
+</pre></div>
+
+<h2>Run it</h2>
+
+<p>Open a terminal and go in the project folder</p>
+
+<div class="highlight"><pre><span class="nb">cd </span>scadenze_fiscali
+</pre></div>
+
+<p>Choise the exporter, you can use <code>JSON</code>, <code>XML</code> and <code>CSV</code> format (you can also use other exporter from scrapy, now you can run scraper using:</p>
+
+<div class="highlight"><pre>scrapy crawl scadenze_fiscali -o result/items.xml -t xml
+</pre></div>
+
+<ul>
+<li>
+<code>-o</code>: parameter define the generated result file</li>
+<li>
+<code>-t</code>: pameter define the export format</li>
+</ul><h2>Generated data</h2>
+
+<p>Generated file have the following structure:</p>
+
+<ul>
+<li>
+<code>items</code>
+
+<ul>
+<li>
+<code>item</code>
+
+<ul>
+<li>
+<code>when</code>: day of deadline</li>
+<li>
+<code>who</code>: who need to respect this deadline</li>
+<li>
+<code>what</code>: the deadline description</li>
+<li>
+<code>how</code>: how user can "resolve" the deadline</li>
+<li>
+<code>code</code>: code of this deadline type</li>
+<li>
+<code>type</code>: type of responsability</li>
+<li>
+<code>category</code>: Category of user that must rquire to respect the deadline</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><p>You can find more info in the wiki (Work In Progres)</p>
+
+<h2>Know issues</h2>
+
+<ul>
+<li>This tool grab data for the specified year information. This data is wired in code, so if you require information for a different year is required to change this information directlry in the 
+spider file.</li>
+<li>Exported JSON data generate have text encoding error. Is required for you to re-convert generated file.</li>
+</ul><h2>Disclaimer</h2>
+
+<p>All information will be grabbed directly from <a href="http://www1.agenziaentrate.gov.it/documentazione/scadenzefiscali/index.htm">Inland Revenue</a>. I don't assume responsability for data or damange that 
+this data can causate.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mavimo">mavimo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-521377-10");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
